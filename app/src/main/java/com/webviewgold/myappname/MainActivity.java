@@ -596,9 +596,9 @@ public class MainActivity extends AppCompatActivity
                 .build();
 
 
-        if (BuildConfig.IS_DEBUG_MODE) {
-            osURL(myOSurl);
-        }
+        // if (BuildConfig.IS_DEBUG_MODE) {
+        //     osURL(myOSurl);
+        // }
 
         if (Config.SHOW_BANNER_AD && !disableAdMob) {
             if (Config.USE_FACEBOOK_ADS) {
