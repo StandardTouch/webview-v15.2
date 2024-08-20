@@ -12,7 +12,7 @@ public class Config {
     // 1. Buy a WebViewGold license (https://www.webviewgold.com/download/android) for each app you publish. If your app is going to be free, a "Regular license" is required. If your app will be sold to your users or if you use the In-App Purchases API, an "Extended license" is required. More info: https://codecanyon.net/licenses/standard?ref=onlineappcreator
     // 2. Grab your Purchase Code (this is how to find it quickly: https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-)
     // 3. Great! Just enter it here and restart your app:
-    public static final String PURCHASECODE = "xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx";
+    public static final String PURCHASECODE = "8F2B3D-H7G9K2-L1M4N8-J4P7Q5-R8S2T9";
     // 4. Enjoy your app! :)
 
     /**
