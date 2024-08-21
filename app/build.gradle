@@ -28,6 +28,16 @@ android {
                 onesignal_google_project_number: 'REMOTE'
         ]
     }
+
+    signingConfigs {
+        release {
+            storeFile file("keystore.jks") // Ensure this file exists in your project directory
+            storePassword "your-keystore-password"
+            keyAlias "alias_name"
+            keyPassword "your-key-password"
+        }
+    }
+
     buildTypes {
         debug {
             debuggable true
@@ -40,8 +50,10 @@ android {
             buildConfigField "Boolean", "IS_DEBUG_MODE", 'false'
             buildConfigField "String", "ONESIGNAL_APP_ID", ONESIGNAL_APP_ID
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release // Use the release signing config
         }
     }
+
     compileSdk 34
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
