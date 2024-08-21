@@ -153,3 +153,7 @@ hs_err_pid*
 /inapp/src/androidTest/java/com/
 /inapp/src/androidTest/resources/
 /.idea/
+
+
+# text file for configuration
+signing_details.txt
