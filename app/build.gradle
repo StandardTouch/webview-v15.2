@@ -31,7 +31,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("keystore.jks") // Ensure this file exists in your project directory
+            storeFile file("../keystore.jks") // Ensure this file exists in your project directory
             storePassword "your-keystore-password"
             keyAlias "alias_name"
             keyPassword "your-key-password"
