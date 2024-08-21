@@ -101,7 +101,7 @@ public class Config {
     public static final boolean REMAIN_SPLASH_OPTION = false;
 
     //Set the splash screen image size with respect to the device's smallest width/height; range in percentage [0-100]; Caution: value  = 0 will hide the image completely
-    public static final double SCALE_SPLASH_IMAGE = 25;
+    public static final double SCALE_SPLASH_IMAGE = 50;
 
     //Set to "true" for black status bar text; Set to "false" for white status bar text; Use 'colorPrimaryDark' in style.xml to choose the status bar background color
     static boolean blackStatusBarText = false;
