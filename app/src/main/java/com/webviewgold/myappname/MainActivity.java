@@ -93,7 +93,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import static com.webviewgold.myappname.BuildConfig.ONESIGNAL_APP_ID;
+// done by yaseen
+// import static com.webviewgold.myappname.BuildConfig.ONESIGNAL_APP_ID;
 import static com.webviewgold.myappname.Config.BROWSER_BLACKLIST;
 import static com.webviewgold.myappname.Config.BROWSER_WHITELIST;
 import android.widget.ProgressBar;
@@ -2106,15 +2107,16 @@ public class MainActivity extends AppCompatActivity
         isInBackGround = false;
         TimeStamp = Calendar.getInstance().getTimeInMillis();
 
+// done by yaseen
 
-        if (Config.PUSH_ENABLED) {
+        // if (Config.PUSH_ENABLED) {
 
-            OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
-            OneSignal.initWithContext(this);
-            OneSignal.setAppId(ONESIGNAL_APP_ID);
+        //     OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
+        //     OneSignal.initWithContext(this);
+        //     OneSignal.setAppId(ONESIGNAL_APP_ID);
 
 
-        }
+        // }
 
         if (mAdView != null) {
             if (!HIDE_ADS_FOR_PURCHASE) {
