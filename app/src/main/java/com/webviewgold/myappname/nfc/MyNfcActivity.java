@@ -18,8 +18,8 @@ import android.os.Parcelable;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.webviewgold.myappname.BuildConfig;
+// done by yaseen
+// import com.webviewgold.myappname.BuildConfig;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -81,7 +81,8 @@ public class MyNfcActivity extends AppCompatActivity {
             // Get the Text
             text = new String(payload, languageCodeLength + 1, payload.length - languageCodeLength - 1, textEncoding);
         } catch (UnsupportedEncodingException e) {
-            if (BuildConfig.IS_DEBUG_MODE) Log.d("UnsupportedEncoding", e.toString());
+            // done by yaseen
+            // if (BuildConfig.IS_DEBUG_MODE) Log.d("UnsupportedEncoding", e.toString());
         }
 
         TextView textView = new TextView(this);
