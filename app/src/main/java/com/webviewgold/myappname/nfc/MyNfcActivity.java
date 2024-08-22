@@ -18,8 +18,8 @@ import android.os.Parcelable;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
-// done by yaseen
-// import com.webviewgold.myappname.BuildConfig;
+
+import com.webviewgold.myappname.BuildConfig;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

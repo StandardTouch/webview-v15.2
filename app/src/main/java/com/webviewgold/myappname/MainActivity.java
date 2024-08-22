@@ -94,7 +94,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 // done by yaseen
-// import static com.webviewgold.myappname.BuildConfig.ONESIGNAL_APP_ID;
+import static com.webviewgold.myappname.BuildConfig.ONESIGNAL_APP_ID;
 import static com.webviewgold.myappname.Config.BROWSER_BLACKLIST;
 import static com.webviewgold.myappname.Config.BROWSER_WHITELIST;
 import android.widget.ProgressBar;
@@ -208,7 +208,7 @@ import static com.webviewgold.myappname.WebViewApp.context;
 
 import com.pushwoosh.Pushwoosh;
 // done by yaseen
-// import com.webviewgold.myappname.biometric.BiometricPromptUtils;
+import com.webviewgold.myappname.biometric.BiometricPromptUtils;
 
 public class MainActivity extends AppCompatActivity
         implements OSSubscriptionObserver,
@@ -2109,14 +2109,14 @@ public class MainActivity extends AppCompatActivity
 
 // done by yaseen
 
-        // if (Config.PUSH_ENABLED) {
+        if (Config.PUSH_ENABLED) {
 
-        //     OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
-        //     OneSignal.initWithContext(this);
-        //     OneSignal.setAppId(ONESIGNAL_APP_ID);
+            OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
+            OneSignal.initWithContext(this);
+            OneSignal.setAppId(ONESIGNAL_APP_ID);
 
 
-        // }
+        }
 
         if (mAdView != null) {
             if (!HIDE_ADS_FOR_PURCHASE) {
@@ -2149,30 +2149,30 @@ public class MainActivity extends AppCompatActivity
         );
         if (canAuthenticate == BiometricManager.BIOMETRIC_SUCCESS) {
             // done by yaseen
-            // BiometricPrompt biometricPrompt = BiometricPromptUtils.createBiometricPrompt(this,
-            //         new BiometricPrompt.AuthenticationCallback() {
-            //             @Override
-            //             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
-            //                 super.onAuthenticationSucceeded(result);
-            //             }
+            BiometricPrompt biometricPrompt = BiometricPromptUtils.createBiometricPrompt(this,
+                    new BiometricPrompt.AuthenticationCallback() {
+                        @Override
+                        public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
+                            super.onAuthenticationSucceeded(result);
+                        }
 
-            //             @Override
-            //             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
-            //                 super.onAuthenticationError(errorCode, errString);
-            //                 Log.e(">>>>>>>>>>>", "onAuthenticationError1: " + errorCode + " " + errString);
-            //                 if (
-            //                         errorCode == BiometricPrompt.ERROR_NEGATIVE_BUTTON
-            //                                 || errorCode == BiometricPrompt.ERROR_CANCELED
-            //                                 || errorCode == BiometricPrompt.ERROR_USER_CANCELED
-            //                 ) {
-            //                     finish();
-            //                 } else if (errorCode == BiometricPrompt.ERROR_UNABLE_TO_PROCESS){
-            //                     requireUnAuthorisedDialog();
-            //                 }
-            //             }
-            //         });
-            // BiometricPrompt.PromptInfo promptInfo = BiometricPromptUtils.createPromptInfo(this);
-            // biometricPrompt.authenticate(promptInfo);
+                        @Override
+                        public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                            super.onAuthenticationError(errorCode, errString);
+                            Log.e(">>>>>>>>>>>", "onAuthenticationError1: " + errorCode + " " + errString);
+                            if (
+                                    errorCode == BiometricPrompt.ERROR_NEGATIVE_BUTTON
+                                            || errorCode == BiometricPrompt.ERROR_CANCELED
+                                            || errorCode == BiometricPrompt.ERROR_USER_CANCELED
+                            ) {
+                                finish();
+                            } else if (errorCode == BiometricPrompt.ERROR_UNABLE_TO_PROCESS){
+                                requireUnAuthorisedDialog();
+                            }
+                        }
+                    });
+            BiometricPrompt.PromptInfo promptInfo = BiometricPromptUtils.createPromptInfo(this);
+            biometricPrompt.authenticate(promptInfo);
         } else {
             Toast.makeText(getApplicationContext(),
                     "Unable to enable biometric authentication",
