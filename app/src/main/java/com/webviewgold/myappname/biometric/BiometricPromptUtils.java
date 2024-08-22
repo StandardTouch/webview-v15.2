@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
-
-import com.webviewgold.myappname.R;
+// done by yaseen
+// import com.webviewgold.myappname.R;
 
 import java.util.concurrent.Executor;
 
