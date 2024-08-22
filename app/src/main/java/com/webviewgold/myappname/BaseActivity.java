@@ -9,8 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
-
-import com.webviewgold.myappname.biometric.BiometricPromptUtils;
+// done by yaseen
+// import com.webviewgold.myappname.biometric.BiometricPromptUtils;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -49,11 +49,11 @@ public class BaseActivity extends AppCompatActivity {
                     finish();
                 }
             };
+// done by yaseen
+            // BiometricPrompt biometricPrompt = BiometricPromptUtils.createBiometricPrompt(this, bpCallback);
 
-            BiometricPrompt biometricPrompt = BiometricPromptUtils.createBiometricPrompt(this, bpCallback);
-
-            BiometricPrompt.PromptInfo promptInfo = BiometricPromptUtils.createPromptInfo(this);
-            biometricPrompt.authenticate(promptInfo);
+            // BiometricPrompt.PromptInfo promptInfo = BiometricPromptUtils.createPromptInfo(this);
+            // biometricPrompt.authenticate(promptInfo);
         } else {
             Toast.makeText(getApplicationContext(),
                     getString(R.string.unable_to_use_biometric_unlock),
