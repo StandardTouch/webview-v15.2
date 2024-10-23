@@ -116,10 +116,10 @@ public class Config {
     public static final boolean ENABLE_SWIPE_NAVIGATE = false;
 
     //Set to "true" to enable swiping down to refresh the page
-    public static final boolean ENABLE_PULL_REFRESH = false;
+    public static final boolean ENABLE_PULL_REFRESH = true;
 
     //Set to "false" to prevent zoom functionalities for the app user (works by additionally using script injection)
-    public static final boolean ENABLE_ZOOM = true;
+    public static final boolean ENABLE_ZOOM = false;
 
     //Set to "true" to hide the vertical scrollbar
     public static final boolean HIDE_VERTICAL_SCROLLBAR = false;
